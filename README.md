@@ -1,1 +1,3 @@
-# sample_chat_app
+# sample-chat-app
+
+チャットアプリのサンプルです。
