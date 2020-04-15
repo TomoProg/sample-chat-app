@@ -11,6 +11,7 @@ services:
       - "$FRONT_PORT:$FRONT_PORT"
     volumes:
       - ../../front/scripts:/var/scripts
+      - ../../front/data:/data
     environment:
       FRONT_PORT:
       APP_HOST:
