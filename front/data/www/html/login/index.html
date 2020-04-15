@@ -1,56 +1,37 @@
 <!DOCTYPE html>
 <html lang="ja">
-	<head>
-		<meta charset="utf-8">
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
-		<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
-		<script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
-		<title>Sample Chat App</title>
-		<style type="text/css">
-			body {
-				background-color: #DADADA;
-			}
-			body > .grid {
-				height: 100%;
-			}
-			.image {
-				margin-top: -100px;
-			}
-			.column {
-				max-width: 450px;
-			}
-		</style>
-	</head>
-	<body>
-		<div class="ui middle aligned center aligned grid">
-			<div class="column">
-				<h2 class="ui teal image header">
-					<!--img src="assets/images/logo.png" class="image"-->
-					<div class="content">Sample Chat App</div>
-				</h2>
-				<form class="ui large form">
-					<div class="ui stacked segment">
-						<div class="field">
-							<div class="ui left icon input">
-								<i class="user icon"></i>
-								<input type="text" name="email" placeholder="メールアドレス">
-							</div>
-						</div>
-						<div class="field">
-							<div class="ui left icon input">
-								<i class="lock icon"></i>
-								<input type="password" name="password" placeholder="パスワード">
-							</div>
-						</div>
-						<div class="ui fluid large teal submit button">ログイン</div>
-					</div>
-					<div class="ui error message"></div>
-				</form>
-				<div class="ui message">
-					<p>パスワードを忘れた場合は<a href="#">こちら</a></p>
-					<p>アカウントをお持ちでない場合は<a href="#">こちら</a></p>
-				</div>
-			</div>
-		</div>
-	</body>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="../../css/common/normalize.css">
+        <link rel="stylesheet" href="../../css/common/style.css">
+        <link rel="stylesheet" href="../../css/login/style.css">
+        <title>Sample Chat App</title>
+    </head>
+    <body>
+        <div id="page">
+            <div>Sample Chat App</div>
+            <div>
+                <div>
+                    <div>
+                        <input type="text" name="mail" placeholder="メールアドレス">
+                    </div>
+                    <div>
+                        <input type="password" name="password" placeholder="パスワード">
+                    </div>
+                    <div>
+                        <input type="button" value="ログイン" onclick="post">
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        パスワードをお忘れの場合は<a href="../password/new/">こちら</a>
+                    </div>
+                    <div>
+                        アカウントをお持ちでない場合は<a href="../signup/">こちら</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="../../js/login/main.js"></script>
+    </body>
 </html>
