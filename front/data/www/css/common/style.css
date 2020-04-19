@@ -1,0 +1,10 @@
+html, body {
+    height: 100%;
+    /*background-color: #DADADA;*/
+}
+
+#page {
+    width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}

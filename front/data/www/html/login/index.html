@@ -2,36 +2,32 @@
 <html lang="ja">
     <head>
         <meta charset="utf-8">
-        <link rel="stylesheet" href="../../css/common/normalize.css">
-        <link rel="stylesheet" href="../../css/common/style.css">
-        <link rel="stylesheet" href="../../css/login/style.css">
+        <link rel="stylesheet" href="/css/common/normalize.css">
+        <link rel="stylesheet" href="/css/common/style.css">
+        <link rel="stylesheet" href="/css/login/style.css">
         <title>Sample Chat App</title>
     </head>
     <body>
         <div id="page">
-            <div>Sample Chat App</div>
-            <div>
+            <div id="container">
+                <div>Sample Chat App</div>
                 <div>
-                    <div>
-                        <input type="text" name="mail" placeholder="メールアドレス">
-                    </div>
-                    <div>
-                        <input type="password" name="password" placeholder="パスワード">
-                    </div>
-                    <div>
-                        <input type="button" value="ログイン" onclick="post">
-                    </div>
+                    <input type="text" name="email" placeholder="メールアドレス">
                 </div>
                 <div>
-                    <div>
-                        パスワードをお忘れの場合は<a href="../password/new/">こちら</a>
-                    </div>
-                    <div>
-                        アカウントをお持ちでない場合は<a href="../signup/">こちら</a>
-                    </div>
+                    <input type="password" name="password" placeholder="パスワード">
+                </div>
+                <div>
+                    <input type="button" value="ログイン" onclick="post">
+                </div>
+                <div>
+                    パスワードをお忘れの場合は<a href="../password/new/">こちら</a>
+                </div>
+                <div>
+                    アカウントをお持ちでない場合は<a href="../signup/">こちら</a>
                 </div>
             </div>
         </div>
-        <script src="../../js/login/main.js"></script>
+        <script src="/js/common/main.js"></script>
     </body>
 </html>

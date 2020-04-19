@@ -2,16 +2,34 @@
 <html lang="ja">
     <head>
         <meta charset="utf-8">
-        <link rel="stylesheet" href="../../css/common/normalize.css">
-        <link rel="stylesheet" href="../../css/common/style.css">
-        <link rel="stylesheet" href="../../css/login/style.css">
+        <link rel="stylesheet" href="/css/common/normalize.css">
+        <link rel="stylesheet" href="/css/common/style.css">
+        <link rel="stylesheet" href="/css/signup/style.css">
         <title>Sample Chat App</title>
     </head>
     <body>
         <div id="page">
-            <div>
-                signup/index.html
+            <div id="container">
+                <div>Sample Chat App</div>
+                <div id="error_msg"></div>
+                <div>
+                    <input type="text" name="email" placeholder="メールアドレス">
+                </div>
+                <div>
+                    <input type="password" name="password" placeholder="パスワード">
+                </div>
+                <div>
+                    <input type="password" name="password2" placeholder="パスワードの確認">
+                </div>
+                <div>
+                    <input type="text" name="user_name" placeholder="ユーザ名">
+                </div>
+                <div>
+                    <input type="button" value="アカウント作成" onclick="createAccount()">
+                </div>
             </div>
         </div>
+        <script src="/js/common/main.js"></script>
+        <script src="/js/signup/main.js"></script>
     </body>
 </html>
