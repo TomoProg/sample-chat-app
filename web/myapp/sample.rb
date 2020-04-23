@@ -1,8 +1,10 @@
 # myapp.rb
 require "bundler/setup"
-require 'pry'
 require 'sinatra'
-require 'sinatra/reloader' if development?
+if development?
+  require 'sinatra/reloader' if development?
+  require 'pry'
+end
 
 get '/' do
   'Hello world!'
