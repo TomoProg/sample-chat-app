@@ -1,4 +1,3 @@
-# myapp.rb
 require "bundler/setup"
 require 'sinatra'
 if development?
@@ -16,6 +15,5 @@ end
 
 post '/api/signup' do
   param = JSON.parse(request.body.read)
-  binding.pry
   '/api/signup'
 end

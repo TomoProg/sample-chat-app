@@ -8,8 +8,13 @@ module Migrate
         CREATE TABLE #{@db_name}.users
         (
           id INT NOT NULL AUTO_INCREMENT,
-          name VARCHAR(20),
-          PRIMARY KEY (id)
+          email VARCHAR(200) NOT NULL,
+          password VARCHAR(20) NOT NULL,
+          name VARCHAR(20) NOT NULL,
+          created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+          updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+          PRIMARY KEY (id),
+          UNIQUE (email)
         )
         SQL
       )
