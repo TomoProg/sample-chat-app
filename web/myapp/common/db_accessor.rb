@@ -11,8 +11,11 @@ module Common
       @client = Mysql2::Client.new(host: host, username: username, password: password)
     end
 
-    def execute(sql)
-      @client.query(sql)
+    def execute(sql, *params)
+      require "pry"
+      binding.pry
+      statement = @client.prepare(sql)
+      statement.execute(*params)
     end
   end
 end

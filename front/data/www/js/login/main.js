@@ -1,8 +1,8 @@
 // JSロード
-appendScript("/js/signup/signup_view_model.js");
+appendScript("/js/login/login_view_model.js");
 
-function createAccount() {
-    const viewModel = new SignupViewModel();
+function login() {
+    const viewModel = new LoginViewModel();
 
     // エラーメッセージをクリア
     document.querySelector("#error_msg").textContent = null;
@@ -20,8 +20,5 @@ function createAccount() {
     }
 
     // ユーザ登録
-    const result = viewModel.create();
-    if(result.result) {
-        location.href = "/talk_list"
-    }
+    const result = viewModel.login();
 }

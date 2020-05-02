@@ -11,6 +11,7 @@
         <div id="page">
             <div id="container">
                 <div>Sample Chat App</div>
+                <div id="error_msg"></div>
                 <div>
                     <input type="text" name="email" placeholder="メールアドレス">
                 </div>
@@ -18,7 +19,7 @@
                     <input type="password" name="password" placeholder="パスワード">
                 </div>
                 <div>
-                    <input type="button" value="ログイン" onclick="post">
+                    <input type="button" value="ログイン" onclick="login()">
                 </div>
                 <div>
                     パスワードをお忘れの場合は<a href="../password/new/">こちら</a>
@@ -29,5 +30,6 @@
             </div>
         </div>
         <script src="/js/common/main.js"></script>
+        <script src="/js/login/main.js"></script>
     </body>
 </html>

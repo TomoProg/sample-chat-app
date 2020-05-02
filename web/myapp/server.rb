@@ -1,5 +1,6 @@
 require "bundler/setup"
 require 'sinatra'
+require_relative 'models/user'
 if development?
   require 'sinatra/reloader' if development?
   require 'pry'
@@ -10,10 +11,17 @@ get '/' do
 end
 
 post '/api/login' do
-  '/api/login'
+  param = JSON.parse(request.body.read)
+  binding.pry
+  Models::User.login(param["email"], param["password"])
 end
 
 post '/api/signup' do
   param = JSON.parse(request.body.read)
-  '/api/signup'
+  Models::User.new(
+    email: param["email"],
+    password: param["password"],
+    name: param["user_name"],
+  ).create
+  'OK'
 end

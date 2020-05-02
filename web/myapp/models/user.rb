@@ -1,6 +1,5 @@
 require "bundler/setup"
-require "../common/db_accessor"
-require "pry"
+require_relative "../common/db_accessor"
 
 module Models
   class User
@@ -15,6 +14,25 @@ module Models
           :updated_at
         ]
       end
+
+      def login(email, password)
+        accessor = Common::DBAccessor.new
+        sql = <<~SQL
+          SELECT 
+            id
+          FROM
+            #{ENV["DB_NAME"]}.users
+          WHERE
+            email = ?
+          AND password = ?
+        SQL
+        rows = accessor.execute(sql, email, password)
+        binding.pry
+        if rows.count == 0
+          throw StandardError
+        end
+      end
+
     end
 
     attr_accessor *properties
@@ -48,9 +66,6 @@ module Models
         )
       SQL
       accessor.execute sql
-    end
-
-    def save
     end
 
     private
